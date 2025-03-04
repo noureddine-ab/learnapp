@@ -12,16 +12,71 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
-        appBar: AppBar(
-          title: Text( "My App Bar"),
-          backgroundColor: Colors.white,
-          leading: Icon(Icons.menu),
-          actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
-        ),
-        body: Column(
-          
-        )
+        // appBar: AppBar(
+        //   title: Text( "My App Bar"),
+        //   backgroundColor: Colors.white,
+        //   leading: Icon(Icons.menu),
+        //   actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
+        // ),
+        body: ListView.builder(
+          itemCount:10 ,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(index.toString()),
+          ),
+          )
+
+
+        // ListView(
+        //   scrollDirection: Axis.vertical,
+        //   children: [
+        //     // 1st box
+        //     Container(
+        //       height: 350,
+        //       color: Colors.deepOrange,
+        //     ),
+
+        //     // 2nd box
+        //     Container(
+        //       height: 350,
+        //       color: Colors.deepOrange[400],
+        //     ),
+
+        //     // 3rd box
+        //     Container(height: 350, 
+        //     color: Colors.deepOrange[200],
+        //     ),
+        //   ],
+        //)
+
+
+
+        // Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   crossAxisAlignment: CrossAxisAlignment.start,
+        //   children: [
+        //     // 1st box  
+        //     Expanded(
+        //       child: Container(
+        //         color: Colors.deepPurple,
+        //         ),
+        //     ),
+
+        //       2nd box
+        //       Expanded(
+        //         flex: 2,
+        //         child: Container(
+        //         color: Colors.deepPurple[400],
+        //         ),
+        //       ),
+
+        //       3rd box
+        //       Expanded(
+        //         child: Container(
+        //         color: Colors.deepPurple[200],
+        //         ),
+        //       ),
+        //   ],
+        // )
         /*Center(
           child: Container(
             height: 300,
