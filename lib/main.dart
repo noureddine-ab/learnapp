@@ -18,12 +18,29 @@ class MyApp extends StatelessWidget {
         //   leading: Icon(Icons.menu),
         //   actions: [IconButton(onPressed: () {}, icon: Icon(Icons.logout))],
         // ),
-        body: ListView.builder(
-          itemCount:10 ,
-          itemBuilder: (context, index) => ListTile(
-            title: Text(index.toString()),
+        body: Center(
+          child: GestureDetector(
+            onTap: () {
+              // do somthing, user tapped the container.
+              print("user tapped,");
+            } ,
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.tealAccent,
+              child: Center(child: Text("Tap me!")),
+              ),
           ),
-          )
+        ),
+
+        //GridView
+        //Stack
+        // ListView.builder(
+        //   itemCount:10 ,
+        //   itemBuilder: (context, index) => ListTile(
+        //     title: Text(index.toString()),
+        //   ),
+        //   )
 
 
         // ListView(
